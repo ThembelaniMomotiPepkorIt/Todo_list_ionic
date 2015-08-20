@@ -4,26 +4,24 @@ angular.module('starter.controllers', [])
   console.log('Inside toDoList');
   $scope.todoListItems = [];
 
-  console.log('empty object created');
-
+  
   //init the modal
   $ionicModal.fromTemplateUrl('modal.html', {
     scope: $scope,
     animation : 'slide-in-up'
   }).then(function(modal){
-    console.log('reading in template from index');
+    console.log("Modal window opened");
     $scope.modal = modal;
+
   });
 
   
-
   //function to open modal
   $scope.openModal = function(){
-    console.log('opening model window')
+    console.log("Modal window opened");
     $scope.modal.show();
   };
 
-  console.log('opening model window')
 
   //function to close modal
   $scope.closeModal = function(){
@@ -36,6 +34,7 @@ angular.module('starter.controllers', [])
   });
 
   $scope.AddItem = function(data){
+    
     $scope.todoListItems.push({
       task : data.newItem,
       status:'not done'

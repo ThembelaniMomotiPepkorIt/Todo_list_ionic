@@ -26,7 +26,7 @@
 
     
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="TodoListCtrl">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
@@ -39,13 +39,11 @@
       </ion-header-bar>
 
       <ion-content>
-        <ion-list ng-controller="TodoListCtrl">
+        <ion-list >
           <ion-item ng-repeat="item in todoListItems">{{item.task}}</ion-item>
         </ion-list>
       </ion-content>
     </ion-pane>
-
-
     <script id="modal.html" type="text/ng-template">
       <div class="modal">
         
@@ -69,5 +67,7 @@
         </form>
       </div>
     </script>
+
+    
    </body>
 </html>
